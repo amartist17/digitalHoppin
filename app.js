@@ -75,6 +75,10 @@ app.post("/contact-mail", async (req, res) => {
 // -----------------------------authentication----------------
 
 app.get("/login", async (req, res) => {
+  bcrypt.hash("amricakadalalbc", 10, function (err, hash) {
+    // Store hash in your password DB.
+    console.log(hash);
+  });
   res.render("login");
 });
 
